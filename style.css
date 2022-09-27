@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
+  overflow-y: hidden;
+}
+body{
+  overflow-y: hidden;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./Images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section{
+  width: 400px;
+  height: 320px;
+  /* border: 1px solid yellow; */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3), -5px -5px 5px rgba(0, 0, 0, 0.3);
+  padding: 30px 30px;
+  border-radius: 5px;
+}
+marquee{
+  margin-top: 8px;
+  padding: 4px;
+  font-size: 18px;
+}
+section h1{
+  font-size: 2rem;
+  text-decoration: underline;
+  color: #fff;
+  text-align: center;
+}
+section input{
+  width: 70%;
+  height: 40px;
+  /* margin: auto; */
+  font-size: 20px;
+  border: none;
+  padding: 12px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+section button{
+  height: 40px;
+  background-color: green;
+  border: none;
+  width: 60px;
+  color: #fff;
+  font-size: 14px;
+  margin-left: -4px;
+  overflow: hidden;
+  border-bottom-left-radius: 2px;
+  position: relative;
+  bottom: 2px;
+}
+section button:hover {
+  opacity: 0.6;
+}
+#board{
+  height: 60px;
+  width: 160px;
+  padding: 20px 20px;
+  font-size: 20px;
+  background-color: #fff;
+  color: #333;
+  position: relative;
+  top: 20px;
+  left: 30%;
+  transform: translate(-30%);
+}
+.move-1{
+  height: 80px;
+  width: 80px;
+  background-color: aqua;
+  /* animation: linear 5s ; */
+  animation: box-1 linear 5s running infinite forwards;
+}
+@keyframes box-1{
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateX(900px);
+  }
+  50%{
+    transform: translateY(200px);
+  }
+  75%{
+    transform: translateX(-500%);
+  }
+  100%{
+    transform: translateY(-200px);
+  }
+}
+.move-2{
+  float: right;
+  height: 80px;
+  width: 80px;
+  background-color: coral;
+  /* animation: linear 5s ; */
+  animation: box-2 linear 5s running infinite forwards;
+}
+@keyframes box-2{
+  0%{
+    transform: translateX(0px);
+  }
+  25%{
+    transform: translateX(-900px);
+  }
+  50%{
+    transform: translateY(600px);
+  }
+}
